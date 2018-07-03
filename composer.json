@@ -1,0 +1,14 @@
+{
+    "name": "nedeljko-kuzmanovic/dbforms",
+    "description": "Package that create form class for every database table",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nedeljko Kuzmanovic",
+            "email": "kuzmanovicnedeljko@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
