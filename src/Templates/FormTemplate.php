@@ -28,7 +28,7 @@ class FormTemplate {
 
             "namespace App\Database\Forms\\$className;\n\n".
 
-            "use App\Database\Forms\Form;\n\n".
+            "use NedeljkoKuzmanovic\DbForms\Classes\Form;\n\n".
 
             "class {$className}Form extends Form {\n\n".
 
