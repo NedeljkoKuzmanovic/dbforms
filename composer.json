@@ -19,5 +19,10 @@
                 "NedeljkoKuzmanovic\\DbForms\\DbFormsServiceProvider"
             ]
         }
+    },
+    "autoload": {
+        "psr-4": {
+           "NedeljkoKuzmanovic\\DbForms\\": "src/"
+        }
     }
 }
