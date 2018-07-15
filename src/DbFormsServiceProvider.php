@@ -18,6 +18,14 @@ class DbFormsServiceProvider extends ServiceProvider
         $this->commands([
             CreateForms::class
         ]);
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/nk-dbforms.php', 'nedeljko-kuzmanovic.dbforms'
+        );
+
+        $this->publishes([
+            __DIR__.'/config/nk-dbforms.php' => config_path('nedeljko-kuzmanovic/dbforms.php'),
+        ]);
     }
 
     /**
@@ -27,6 +35,6 @@ class DbFormsServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+
     }
 }

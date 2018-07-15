@@ -12,14 +12,27 @@ class Generator {
      * @var [type]
      */
     static private $forms_folder_location = "app/Database/Forms/";
-
+    /**
+     * Names of tables wich for form will not be generated
+     * @var [type]
+     */
     static private $exception_table_list = array('migrations');
 
+    /**
+     * Configures all important variables
+     * @return [type] [description]
+     */
+    private static function configure(){
+        self::$exception_table_list = config('nedeljko-kuzmanovic.dbforms.ignored_tables') ?? array('migrations');
+        self::$forms_folder_location = config('nedeljko-kuzmanovic.dbforms.forms_location') ??"app/Database/Forms/";
+    }
     /**
      * Generates form classes for all database tables
      * @return [type] [description]
      */
     public static function generateAllForms() : Response {
+        self::configure();
+
         $database = self::getDatabaseData();
 
         foreach($database as $table_name => $table_data){
@@ -57,9 +70,9 @@ class Generator {
             if($table_name == $exception){
                 return true;
             }
-
-            return false;
         }
+
+        return false;
     }
 
     /**
