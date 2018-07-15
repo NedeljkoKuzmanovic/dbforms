@@ -16,8 +16,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "NedeljkoKuzmanovic\DbForms\DbFormsServiceProvider"
+                "NedeljkoKuzmanovic\\DbForms\\DbFormsServiceProvider"
             ]
         }
-    },
+    }
 }
